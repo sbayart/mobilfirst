@@ -3,30 +3,89 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 h1 {
     text-transform: uppercase;
     color: #333333;
     text-align: center;
 }
+
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     padding: 0;
 }
+
 header nav {
     border-top: 2px solid #cccccc;
     border-bottom: 2px solid #cccccc;
-
 }
+
 header nav ul li {
     margin: 1em;
 }
+
 a {
 text-decoration: none;
 color: #43AAFF;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+}
+
+main nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main nav h2 {
+    font-size: 1em;
+}
+
+main nav section {
+    margin: 0 1em;
+}
+
+main nav section:last-child ul {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+main nav section:last-child li:last-child {
+    order: -1;
+}
+
 article {
     margin: 3em 0;
+}
+
+@media (min-width: 1000px) {
+    header {
+        margin-right: 2em;
+        width: 20%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    body {
+        flex-direction: row;
+    }
+
+    main {
+        flex-direction: row;
+    }
+    main nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 20%;
+        min-width: 159px;
+        margin-left: 2em;
+    }
 }
